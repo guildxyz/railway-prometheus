@@ -29,7 +29,7 @@ scrape_configs:
 
   - job_name: postgres_exporter
     static_configs:
-    - targets: ['postgres-exporter.railway.internal:9121']
+    - targets: ['postgres-exporter.railway.internal:9187']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s
