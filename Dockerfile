@@ -15,5 +15,6 @@ CMD        [ "--config.file=/etc/prometheus/prometheus.yml", \
              "--web.console.libraries=/usr/share/prometheus/console_libraries", \
              "--web.console.templates=/usr/share/prometheus/consoles", \
              "--web.external-url=http://localhost:9090", \
+             "--web.enable-remote-write-receiver", \
              "--log.level=info"]
  
