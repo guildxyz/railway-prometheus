@@ -38,10 +38,17 @@ scrape_configs:
     static_configs:
     - targets: ['pg_exporter.railway.internal:9630']
 
-  # NATS metrics: requires nats-prometheus-exporter sidecars (one per instance)
-  # pointing at nats.railway.internal:8222, evm-integration-nats.railway.internal:8222,
-  # and nats-copy.railway.internal:8222. The nats:alpine image does not expose /metrics
-  # natively; add scrape jobs here once the exporters are deployed.
+  - job_name: events_nats
+    static_configs:
+    - targets: ['events-nats-exporter.railway.internal:7777']
+
+  - job_name: evm_integration_nats
+    static_configs:
+    - targets: ['evm-nats-exporter.railway.internal:7777']
+
+  - job_name: onchainscore_nats
+    static_configs:
+    - targets: ['onchainscore-nats-exporter.railway.internal:7777']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s
