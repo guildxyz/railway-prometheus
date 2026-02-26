@@ -40,18 +40,15 @@ scrape_configs:
 
   - job_name: events_nats
     static_configs:
-    - targets: ['nats.railway.internal:8222']
-    metrics_path: /metrics
+    - targets: ['nats.railway.internal:7778']
 
   - job_name: evm_integration_nats
     static_configs:
-    - targets: ['evm-integration-nats.railway.internal:8222']
-    metrics_path: /metrics
+    - targets: ['evm-integration-nats.railway.internal:7778']
 
   - job_name: onchainscore_nats
     static_configs:
-    - targets: ['nats-copy.railway.internal:8222']
-    metrics_path: /metrics
+    - targets: ['nats-copy.railway.internal:7778']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s
